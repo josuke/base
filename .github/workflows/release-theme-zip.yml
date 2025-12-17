@@ -1,0 +1,43 @@
+name: Release theme zip
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build zip (base/)
+        run: |
+          set -euo pipefail
+
+          THEME_SLUG="base"
+          ZIP_NAME="${THEME_SLUG}.zip"
+
+          rm -rf dist
+          mkdir -p dist/${THEME_SLUG}
+
+          rsync -a --delete \
+            --exclude ".git/" \
+            --exclude ".github/" \
+            --exclude "node_modules/" \
+            --exclude ".DS_Store" \
+            --exclude "dist/" \
+            --exclude "*.map" \
+            ./ dist/${THEME_SLUG}/
+
+          cd dist
+          zip -r "${ZIP_NAME}" "${THEME_SLUG}"
+
+      - name: Create GitHub Release + upload zip
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/base.zip
