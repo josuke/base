@@ -98,12 +98,8 @@ Los templates base (`page.php`, `single.php`, `archive.php`, etc.) siguen la jer
 - `base_component_assets_enabled`  
   Habilita/deshabilita encolado de CSS/JS por componente.
 
-## Updater (opcional)
-El updater de GitHub no se carga por defecto. Para activarlo:
-```php
-define('BASE_ENABLE_UPDATER', true);
-```
-Nota: solo se carga en el admin para evitar impacto en el frontend.
+## Updater
+El updater de GitHub se carga solo en el admin para evitar impacto en el frontend.
 
 ## Estructura del theme
 - `functions.php`: carga de setup, limpieza y updater opcional.
