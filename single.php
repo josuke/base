@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php base_component('header'); ?>
+
 <main>
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
@@ -7,5 +9,7 @@
 		<?php endwhile; ?>
 	<?php endif; ?>
 </main>
+
+<?php base_component('footer'); ?>
 
 <?php get_footer(); ?>
