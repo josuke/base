@@ -2,7 +2,7 @@
 
 <?php base_component('header'); ?>
 
-<main>
+<main id="main">
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : the_post(); ?>
 			<?php base_component('content'); ?>

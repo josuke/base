@@ -1,0 +1,110 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/montserrat-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/montserrat-400-italic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/montserrat-700.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/montserrat-700-italic.woff2") format("woff2");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/roboto-400.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/roboto-400-italic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/roboto-700.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/roboto-700-italic.woff2") format("woff2");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Shared design tokens */
+:root {
+	--color-brand: #a01443;
+	--color-accent: #1e6bf3;
+
+	--color-white: #ffffff;
+	--color-light: #eef0f4;
+	--color-dark: #1f2022;
+	--color-black: #000000;
+
+	--color-danger: #d92d20;
+	--color-success: #12a150;
+	--color-info: #1e97cf;
+
+	--size-0: 0;
+	--size-1: 4px;
+	--size-2: 8px;
+	--size-3: 12px;
+	--size-4: 16px;
+	--size-5: 20px;
+	--size-6: 24px;
+	--size-7: 32px;
+	--size-8: 40px;
+	--size-9: 48px;
+	--size-10: 56px;
+	--size-11: 64px;
+
+	--color-bg: var(--color-white);
+	--color-text: var(--color-black);
+	--color-border: var(--color-dark);
+
+	--font-body: "Roboto", sans-serif;
+	--font-heading: "Montserrat", sans-serif;
+	--font-size-base: var(--size-4);
+	--line-height-base: 1.4;
+}
+
+[data-theme="light"] {
+	--color-bg: var(--color-white);
+	--color-text: var(--color-black);
+}
+
+[data-theme="dark"] {
+	--color-bg: var(--color-black);
+	--color-text: var(--color-white);
+}

@@ -46,7 +46,8 @@ function base_component(string $slug, array $args = []): void {
 		}
 	}
 
+	$prevArgs = get_query_var('base_component_args', null);
 	set_query_var('base_component_args', $args);
 	include $php;
-	set_query_var('base_component_args', null);
+	set_query_var('base_component_args', $prevArgs);
 }

@@ -7,7 +7,7 @@ use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $baseUpdateChecker = PucFactory::buildUpdateChecker(
 	'https://github.com/josuke/base/',
-	get_template_directory() . '/functions.php',
+	get_template_directory() . '/style.css',
 	'base'
 );
 
