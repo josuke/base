@@ -90,6 +90,7 @@
 	--size-11: 64px;
 
 	--color-bg: var(--color-white);
+	--color-layer: var(--color-light);
 	--color-text: var(--color-black);
 	--color-border: var(--color-dark);
 
@@ -101,10 +102,12 @@
 
 [data-theme="light"] {
 	--color-bg: var(--color-white);
+	--color-layer: var(--color-light);
 	--color-text: var(--color-black);
 }
 
 [data-theme="dark"] {
 	--color-bg: var(--color-black);
+	--color-layer: var(--color-dark);
 	--color-text: var(--color-white);
 }

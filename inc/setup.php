@@ -34,6 +34,43 @@ add_action('after_setup_theme', static function (): void {
 	]);
 });
 
+add_action('customize_register', static function ($wp_customize): void {
+	$wp_customize->add_setting('dark_logo', [
+		'default' => '',
+		'sanitize_callback' => 'absint',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'dark_logo', [
+		'label' => __('Logo del sitio (modo oscuro)', 'base'),
+		'section' => 'title_tagline',
+		'mime_type' => 'image',
+	]));
+});
+
+add_action('wp_head', static function (): void {
+	if (is_admin()) {
+		return;
+	}
+
+	$description = '';
+	if (is_singular()) {
+		$excerpt = get_the_excerpt();
+		if (is_string($excerpt)) {
+			$description = trim(wp_strip_all_tags($excerpt));
+		}
+	}
+
+	if ($description === '') {
+		$description = (string) get_bloginfo('description');
+	}
+
+	if ($description === '') {
+		return;
+	}
+
+	echo '<meta name="description" content="' . esc_attr($description) . '">' . "\n";
+}, 1);
+
 add_action('wp_enqueue_scripts', static function (): void {
 	$enabled = apply_filters('base_enable_assets', true);
 	if (!$enabled) {
