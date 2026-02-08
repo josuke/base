@@ -28,6 +28,11 @@ jobs:
           rsync -a --delete \
             --exclude ".git/" \
             --exclude ".github/" \
+            --exclude ".ai/" \
+            --exclude ".vscode/" \
+            --exclude ".gitignore" \
+            --exclude "bin/" \
+            --exclude "README.md" \
             --exclude "node_modules/" \
             --exclude ".DS_Store" \
             --exclude "dist/" \

@@ -1,0 +1,10 @@
+/* Editor styles for the child theme */
+
+.editor-styles-wrapper {
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+.editor-styles-wrapper .hero__title {
+	font-family: var(--font-heading);
+}

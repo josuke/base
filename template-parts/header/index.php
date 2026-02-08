@@ -32,5 +32,6 @@
 	</nav>
 	<div class="site-header__right">
 		<?php base_component('theme-toggle', ['label' => __('Theme', 'base')]); ?>
+		<?php base_component('shop-actions', ['show_cart' => true, 'show_account' => true]); ?>
 	</div>
 </header>

@@ -1,0 +1,1 @@
+// Optional component script.

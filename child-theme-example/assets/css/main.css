@@ -1,0 +1,50 @@
+/* Child theme main styles */
+
+.site-wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: var(--size-8) var(--size-5);
+}
+
+.hero {
+	background: linear-gradient(135deg, var(--color-layer), #ffffff);
+	border: 1px solid color-mix(in srgb, var(--color-border) 25%, transparent);
+	border-radius: 20px;
+	padding: var(--size-9) var(--size-7);
+}
+
+.hero__eyebrow {
+	font-size: var(--size-3);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: color-mix(in srgb, var(--color-text) 60%, transparent);
+	margin: 0 0 var(--size-3);
+}
+
+.hero__title {
+	font-size: clamp(32px, 4vw, 56px);
+	margin: 0 0 var(--size-4);
+}
+
+.hero__subtitle {
+	font-size: var(--size-5);
+	max-width: 52ch;
+	margin: 0 0 var(--size-6);
+}
+
+.hero__cta {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--size-2);
+	padding: var(--size-3) var(--size-5);
+	border-radius: 999px;
+	background: var(--color-brand);
+	color: var(--color-white);
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.hero__cta:focus-visible,
+.hero__cta:hover {
+	background: color-mix(in srgb, var(--color-brand) 85%, var(--color-black));
+}
