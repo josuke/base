@@ -71,3 +71,5 @@ El theme base incluye un panel en el Customizer para cambiar variables CSS:
 - `--font-body`, `--font-heading`
 
 Los cambios se aplican como overrides en `:root` sin tocar los archivos.
+
+Las tipografias se eligen desde un listado de Google Fonts y el theme carga automaticamente la fuente seleccionada (CDN).

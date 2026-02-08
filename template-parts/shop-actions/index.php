@@ -70,11 +70,13 @@ if (!$items) {
 		<?php if ($item['type'] === 'cart') : ?>
 			<?php $classes = 'shop-actions__link shop-actions__cart' . (($item['count'] ?? 0) === 0 ? ' is-empty' : ''); ?>
 			<a class="<?php echo esc_attr($classes); ?>" href="<?php echo esc_url($item['url']); ?>" aria-label="<?php echo esc_attr($item['label']); ?>">
+				<?php echo base_svg('shopping-cart', ['class' => 'shop-actions__icon', 'aria-hidden' => 'true']); ?>
 				<span class="shop-actions__label"><?php echo esc_html($item['label']); ?></span>
 				<span class="shop-actions__count" aria-hidden="true"><?php echo esc_html((int) $item['count']); ?></span>
 			</a>
 		<?php else : ?>
 			<a class="shop-actions__link shop-actions__account" href="<?php echo esc_url($item['url']); ?>">
+				<?php echo base_svg('user', ['class' => 'shop-actions__icon', 'aria-hidden' => 'true']); ?>
 				<span class="shop-actions__label"><?php echo esc_html($item['label']); ?></span>
 			</a>
 		<?php endif; ?>
