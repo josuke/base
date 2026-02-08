@@ -5,52 +5,52 @@ function base_font_choices(): array {
 	return [
 		'roboto' => [
 			'label' => 'Roboto',
-			'stack' => '"Roboto", sans-serif',
+			'stack' => 'Roboto, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
 		],
 		'inter' => [
 			'label' => 'Inter',
-			'stack' => '"Inter", sans-serif',
+			'stack' => 'Inter, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
 		],
 		'open-sans' => [
 			'label' => 'Open Sans',
-			'stack' => '"Open Sans", sans-serif',
+			'stack' => 'Open Sans, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap',
 		],
 		'lato' => [
 			'label' => 'Lato',
-			'stack' => '"Lato", sans-serif',
+			'stack' => 'Lato, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap',
 		],
 		'montserrat' => [
 			'label' => 'Montserrat',
-			'stack' => '"Montserrat", sans-serif',
+			'stack' => 'Montserrat, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap',
 		],
 		'poppins' => [
 			'label' => 'Poppins',
-			'stack' => '"Poppins", sans-serif',
+			'stack' => 'Poppins, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap',
 		],
 		'raleway' => [
 			'label' => 'Raleway',
-			'stack' => '"Raleway", sans-serif',
+			'stack' => 'Raleway, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap',
 		],
 		'source-sans-3' => [
 			'label' => 'Source Sans 3',
-			'stack' => '"Source Sans 3", sans-serif',
+			'stack' => 'Source Sans 3, sans-serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap',
 		],
 		'merriweather' => [
 			'label' => 'Merriweather',
-			'stack' => '"Merriweather", serif',
+			'stack' => 'Merriweather, serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap',
 		],
 		'playfair-display' => [
 			'label' => 'Playfair Display',
-			'stack' => '"Playfair Display", serif',
+			'stack' => 'Playfair Display, serif',
 			'google' => 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap',
 		],
 	];
