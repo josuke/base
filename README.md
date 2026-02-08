@@ -64,3 +64,10 @@ Incluye:
 - `assets/css/main.css` y `assets/js/main.js`.
 - `functions.php` con encolado de assets y editor styles del hijo.
 - `screenshot.png` de ejemplo.
+
+## Personalizador (design tokens)
+El theme base incluye un panel en el Customizer para cambiar variables CSS:
+- `--color-brand`, `--color-accent`, `--color-bg`, `--color-text`
+- `--font-body`, `--font-heading`
+
+Los cambios se aplican como overrides en `:root` sin tocar los archivos.

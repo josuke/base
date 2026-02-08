@@ -5,6 +5,7 @@ require_once __DIR__ . '/inc/setup.php';
 require_once __DIR__ . '/inc/cleanup.php';
 require_once __DIR__ . '/inc/components.php';
 require_once __DIR__ . '/inc/icons.php';
+require_once __DIR__ . '/inc/customizer.php';
 
 if (is_admin()) {
 	require_once __DIR__ . '/inc/updater.php';
