@@ -30,9 +30,8 @@ jobs:
             --exclude ".github/" \
             --exclude ".ai/" \
             --exclude ".vscode/" \
+            --exclude ".bin/" \
             --exclude ".gitignore" \
-            --exclude "bin/" \
-            --exclude "README.md" \
             --exclude "node_modules/" \
             --exclude ".DS_Store" \
             --exclude "dist/" \

@@ -9,7 +9,7 @@ $showCart = $args['show_cart'] ?? true;
 $showAccount = $args['show_account'] ?? false;
 $showLogout = $args['show_logout'] ?? true;
 $accountLabelIn = $args['account_label_logged_in'] ?? __('My account', 'base');
-$accountLabelOut = $args['account_label_logged_out'] ?? __('Login', 'base');
+$accountLabelOut = $args['account_label_logged_out'] ?? __('My account', 'base');
 $logoutLabel = $args['logout_label'] ?? __('Logout', 'base');
 
 if (!function_exists('WC')) {
@@ -41,7 +41,7 @@ if ($showAccount && function_exists('wc_get_page_permalink')) {
 			$url = $account_url;
 		} else {
 			$label = $accountLabelOut;
-			$url = wp_login_url($account_url);
+			$url = $account_url;
 		}
 
 		$items[] = [
@@ -73,6 +73,11 @@ if (!$items) {
 				<?php echo base_svg('shopping-cart', ['class' => 'shop-actions__icon', 'aria-hidden' => 'true']); ?>
 				<span class="shop-actions__label"><?php echo esc_html($item['label']); ?></span>
 				<span class="shop-actions__count" aria-hidden="true"><?php echo esc_html((int) $item['count']); ?></span>
+			</a>
+		<?php elseif ($item['type'] === 'logout') : ?>
+			<a class="shop-actions__link shop-actions__logout" href="<?php echo esc_url($item['url']); ?>">
+				<?php echo base_svg('user', ['class' => 'shop-actions__icon', 'aria-hidden' => 'true']); ?>
+				<span class="shop-actions__text"><?php echo esc_html($item['label']); ?></span>
 			</a>
 		<?php else : ?>
 			<a class="shop-actions__link shop-actions__account" href="<?php echo esc_url($item['url']); ?>">

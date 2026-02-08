@@ -35,6 +35,10 @@
 	border: 0;
 }
 
+.shop-actions__text {
+	white-space: nowrap;
+}
+
 .shop-actions__count {
 	display: inline-flex;
 	align-items: center;
